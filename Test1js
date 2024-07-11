@@ -1,0 +1,11 @@
+fetch('https://api.pipedrive.com/v1/deals?api_token=YOUR_API_TOKEN')
+    .then(response => response.json())
+    .then(data => {
+        // обработка данных и отображение iframe
+        const iframe = document.createElement('iframe');
+        iframe.src = 'https://example.com';
+        iframe.width = '100%';
+        iframe.height = '600px';
+        document.body.appendChild(iframe);
+    })
+    .catch(error => console.error('Error:', error));
